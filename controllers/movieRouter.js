@@ -9,4 +9,9 @@ router01.post("/add", async(req,res)=>{
   res.json({status:"success"})
 })
 
+router01.get("/view", async(req,res)=> {
+   let data = await movieModel.find()
+   res.json(data)
+})
+
 module.exports = router01
