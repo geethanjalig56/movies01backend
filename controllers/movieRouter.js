@@ -14,4 +14,10 @@ router01.get("/view", async(req,res)=> {
    res.json(data)
 })
 
+router01.post("/src",async(req,res)=>{
+    let input = req.body
+    let data = await movieModel.find(input)
+    res.json(data)
+})
+
 module.exports = router01
